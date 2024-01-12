@@ -16,15 +16,13 @@ function countVowelsForEach (str) {
   }
 
   function countVowelsFilter (str) {
-    let count = 0;
+    
     let arr = str.split('');
     function countVowels (elem) {
-        if (elem in obj) {
-            count++;
-          }
+        return elem in obj;
     }
-    arr.filter(countVowels);
-    return count;
+    let result = arr.filter(countVowels);
+    return result.length;
   }
 
   function countVowelsReduce (str) {
